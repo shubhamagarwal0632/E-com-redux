@@ -1,0 +1,29 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.container1{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  /* flex-direction: column; */
+  height: 100vh;
+  /* background-color:aqua ; */
+}
+
+.card{
+  /* padding:5px; */
+  margin: 25px;
+  /* background-color: blue; */
+}
+
+/* .btn{ */
+  /* align-items: center;
+  justify-content: center;
+  display: flex;
+  gap: 25px;
+} */
+img{
+  width:20vw;
+  border-radius: 5px;
+}
