@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 // import { clearitem } from '../redux/cartslice'
 { console.log(clearitem) }
 
-export const Cart = () => {
+export const Cart = (items) => {
   const dispatch = useDispatch();
   const cartitem = useSelector(selectcartitem);
   return (
