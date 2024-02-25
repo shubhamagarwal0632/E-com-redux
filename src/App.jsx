@@ -5,20 +5,21 @@ import { Product } from './components/Product'
 import { Cart } from './components/Cart'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import MoreProduct from './components/MoreProduct'
+import { Products } from './components/data'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [data, setData] = useState([...Products])
 
   return (
     <>
       <BrowserRouter>
         <Navbar />  
         <Routes>
-          <Route path='/' element={<Product />} />
+          <Route path='/' element={<Product items={data} />} />
+          <Route path='/product/:id' element={<MoreProduct/>}/>
           <Route path='/cart' element={<Cart />} />
           <Route path='/moreproduct' element={<MoreProduct/>} />
         </Routes>
-        <Product />
       </BrowserRouter>
     </>
   )

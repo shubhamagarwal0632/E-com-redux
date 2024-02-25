@@ -7,7 +7,7 @@ import { Products } from './data'
 import { useDispatch, useSelector } from 'react-redux'
 import { addtocart, selectcartitem } from '../redux/cartslice';
 import { Link } from 'react-router-dom';
-export const Product = () => {
+export const Product = ({items}) => {
   const dispatch = useDispatch();
   // const cartitem = useSelector(selectcartitem);
   // console.log(cartitem);
@@ -24,19 +24,19 @@ export const Product = () => {
       progress: undefined,
       theme: "light",
       transition: Bounce,
-      });
+    });
   }
   return (
     <>
       <div className="container1 container ">
-        <ToastContainer/>
+        <ToastContainer />
         <div className="row justify-content-center">
           {Products.map((item) => (<>
 
-            <div className="card bg-dark text-white rounded  align-items-center m-4.5" style={{ width: ['18rem'] }}>
+            <div className="card bg-dark text-white rounded col-md-6 align-items-center m-4.5" style={{ width: ['18rem'] }}>
               <div className="p-4 rounded">
-                <Link to={'/moreproduct'}>
-                <img src={item.imgSrc} className="card-img-top" alt="..." />
+                <Link to={`/product/${item.id}`}>
+                  <img src={item.imgSrc} className="card-img-top" alt="..." />
                 </Link>
 
               </div>
